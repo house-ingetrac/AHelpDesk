@@ -35,7 +35,7 @@ public class Ticket implements Comparable<Ticket>{
     public String getName(){	 
 	return name;
     }
-    public int  getPriority(){
+    public int getPriority(){
 	return priority;
     }
     public int getStatus(){
@@ -48,6 +48,14 @@ public class Ticket implements Comparable<Ticket>{
 	return problem;
     }
     public int compareTo(Ticket other){
-	return 1;
+	if (this.getPriority() > other.getPriority()){
+	    return 1;
+	}
+	else if (this.getPriority() == other.getPriority()){
+	    return 0;
+	}
+	else{
+	    return -1;
+	}
     }
 }

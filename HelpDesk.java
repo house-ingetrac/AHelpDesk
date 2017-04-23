@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class HelpDesk {
 
-    private static ArrayPriorityQueue1<Ticket> _q;
+    private static ArrayPriorityQueue<Ticket> _q;
     
     public HelpDesk(){
-	_q = new ArrayPriorityQueue1<Ticket>();
+	_q = new ArrayPriorityQueue<Ticket>();
     }
 
     public static boolean addToQueue(Scanner superScanner){
@@ -24,7 +24,7 @@ public class HelpDesk {
 	}
 	else{
 	    System.out.println( "Thanks. Let's get started on the problems.");
-		}	
+	}	
 	return true;
     }
     
