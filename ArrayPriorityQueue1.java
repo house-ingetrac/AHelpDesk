@@ -7,21 +7,21 @@ HW32 -- Getting Past the Velvet Rope
 
 import java.util.ArrayList;
     
-public class ArrayPriorityQueue1<T> implements Comparable<T>{
+public class ArrayPriorityQueue1<T> implements PriorityQueue<T> {
     
     ArrayList<T> PQueue;
     
-    public ArrayPriorityQueue(){
+    public ArrayPriorityQueue1(){
 	PQueue = new ArrayList<T>();
     }
 
     public void add (T x){
-	if (isEmpty() || x.compareTo(PQueue.get(PQueue.size() - 1)) < 0){
+	if (isEmpty() ||((Comparable)x).compareTo((Comparable)PQueue.get(PQueue.size() - 1)) < 0){
 	    PQueue.add(x);
 	}
 	else{
 	    for (int i = 0; i < PQueue.size(); i++){
-		if (x.compareTo(PQueue.get(i)) >= 0){
+		if (((Comparable)x).compareTo((Comparable)PQueue.get(i)) >= 0){
 		    PQueue.add(i, x);
 		    break;
 		}
@@ -38,7 +38,8 @@ public class ArrayPriorityQueue1<T> implements Comparable<T>{
     }
 
     public T removeMin(){
-	return TPQueue.remove(PQueue.size() - 1);
+	return PQueue.remove(PQueue.size() - 1);
+	
     }
 
     public String toString(){
@@ -50,7 +51,7 @@ public class ArrayPriorityQueue1<T> implements Comparable<T>{
     }	
     
     public static void main(String[] args){
-	ArrayPriorityQueue<T> yea = new ArrayPriorityQueue<T>();
+       	ArrayPriorityQueue1 yea = new ArrayPriorityQueue1<Integer>();
 	System.out.println(yea.isEmpty());
 	yea.add(0);
 	yea.add(2);
