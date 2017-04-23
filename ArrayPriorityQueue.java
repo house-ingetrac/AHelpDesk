@@ -26,13 +26,13 @@ public class ArrayPriorityQueue<E> {
   } //O(n)
 
   //checks the end of the ArrayList
-  public E peakMin() {
+  public E peekMin() {
     return data.get(data.size() - 1).getData();
   } //O(1)
 
   // removes from the back of the ArrayList
   public E removeMin() {
-    E ret = peakMin();
+    E ret = peekMin();
     data.remove(data.size() - 1);
     return ret;
   } //O(1)
