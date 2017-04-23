@@ -18,6 +18,13 @@ public class HelpDesk {
 	newTicket.setProblem(superScanner.nextLine());
 	System.out.println("How would you rate the direness of your problem?");
 	newTicket.setPriority(superScanner.nextLine());
+	System.out.println("Ok good. So is there another problem you or your friends need help with?");
+	if (superScanner.nextLine().equals("yes")){
+	    addToQueue();
+	}
+	else{
+	    "Thanks. Let's get started on the problems."
+		}	
 	return true;
     }
     
@@ -33,7 +40,7 @@ public class HelpDesk {
 	    System.out.println("Glad to help!");
 	}
 	else{
-	    System.out.println("Sorry we couldn't be of assistance. We're not actully a helpdesk");
+	    System.out.println("Sorry we couldn't be of assistance. We're not actully a helpdesk, but a malware that's been selling your data to the interwebs this whole time.");
 	}
     }
     
