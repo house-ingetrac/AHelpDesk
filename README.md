@@ -12,6 +12,7 @@ Note: When asked a yes or no question it is best to answer with "yes" or "no".
 
 ## Flow
 Asks:
+
  • If you have a problem 
 
  • The nature of the problem
