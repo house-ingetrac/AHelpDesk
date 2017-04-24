@@ -51,7 +51,7 @@ public class ArrayPriorityQueue<T> implements PriorityQueue<T> {
     }	
     
     public static void main(String[] args){
-       	ArrayPriorityQueue1 yea = new ArrayPriorityQueue1<Integer>();
+       	ArrayPriorityQueue yea = new ArrayPriorityQueue<Integer>();
 	System.out.println(yea.isEmpty());
 	yea.add(0);
 	yea.add(2);
